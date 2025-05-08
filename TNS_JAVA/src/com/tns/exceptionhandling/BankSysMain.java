@@ -8,7 +8,7 @@ public class BankSysMain {
 		bank.DisplayDetails();
 //		bank.Deposit(5000);	
 		bank.Deposit(100001);
-		bank.Withdraw(7000);
+		bank.Withdraw(16000);
 		
 	}
 

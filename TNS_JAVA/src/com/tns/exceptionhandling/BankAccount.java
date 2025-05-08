@@ -44,11 +44,11 @@ public class BankAccount{
 	
 	public void Withdraw(int amount) {
 		try {
-			if(amount<0 || amount > WITHDRAW_LIMIT) {
-				throw new InsufficientFundsException("Insufficient Funds."+balance);
+			if(amount>balance || amount > WITHDRAW_LIMIT) {
+				throw new InsufficientFundsException("Insufficient Funds... Available Balance: "+balance);
 			}
 			balance-=amount;
-			System.out.println("Balance After the Withdraw Transaction: "+balance);
+			System.out.println("Balance After the Withdrawl Transaction: "+balance);
 
 		}catch(InsufficientFundsException e) {
 			System.out.println(e.getMessage());
